@@ -9,11 +9,12 @@ main {
 
 h1 {
 	font-size: 3rem;
+	padding-bottom: 1rem;
 }
 
 label {
 	display: block;
-	margin-top: 1rem;
+	padding-bottom: 1rem;
 	padding-top: 0.3rem;
 	border-top: 0.15rem solid rgba(0, 0, 0, 0.35);
 	font-size: 1.2rem;
@@ -31,22 +32,18 @@ input {
 img {
 	display: block;
 	padding-top: 0.3rem;
+	height: 0;
+	overflow: hidden;
 }
 
 section {
 	color: deeppink;
 }
 
-section label input[type=radio]:checked~img {
+input[type=radio]:checked~img {
 	height: 20rem;
 	display: block;
 	margin: auto;
-}
-
-img {
-	height: 0;
-	overflow: hidden;
-	transition: .7s ease;
 }
 
 p {
@@ -64,6 +61,7 @@ input[type=radio]:checked+p>.close::before {
 	display: none;
 	font-weight: 900;
 	font-style: normal;
+	transition: all 1s;
 }
 
 .open::before {
@@ -72,6 +70,7 @@ input[type=radio]:checked+p>.close::before {
 	display: none;
 	font-weight: 900;
 	font-style: normal;
+	transition: all 1s;
 }
 
 @media (hover: hover) {
@@ -83,11 +82,7 @@ input[type=radio]:checked+p>.close::before {
 		height: 20rem;
 		display: block;
 		margin: auto;
-	}
-
-	section:hover img {
-		height: 0;
-		overflow: hidden;
+		transition: .9s ease;
 	}
 
 	label:hover .close::before {
@@ -117,7 +112,7 @@ input[type=radio]:checked+p>.close::before {
 		font-size: 1.1rem;
 	}
 
-	section label input[type=radio]:checked~img {
+	input[type=radio]:checked~img {
 		height: 20rem;
 	}
 }
@@ -132,7 +127,7 @@ input[type=radio]:checked+p>.close::before {
 		font-size: 1rem;
 	}
 
-	section label input[type=radio]:checked~img {
+	input[type=radio]:checked~img {
 		height: 13rem;
 	}
 }
