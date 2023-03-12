@@ -1,0 +1,133 @@
+body {
+	margin: 2rem auto;
+}
+
+main {
+	width: 75%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+label {
+	display: block;
+	padding-bottom: 1rem;
+	padding-top: 0.3rem;
+	border-top: 0.15rem solid rgba(0, 0, 0, 0.35);
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+label:active {
+	opacity: .7;
+}
+
+input {
+	display: none;
+}
+
+img {
+	display: block;
+	padding-top: 0.3rem;
+	height: 0;
+	overflow: hidden;
+}
+
+section {
+	color: deeppink;
+}
+
+input[type=radio]:checked~img {
+	height: 20rem;
+	display: block;
+	margin: auto;
+}
+
+p {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type=radio]:checked+p {
+	color: black;
+}
+
+input[type=radio]:checked+p>.close::before {
+	font-family: "Font Awesome 5 Free";
+	content: '\f00d';
+	display: none;
+	font-weight: 900;
+	font-style: normal;
+	transition: all 1s;
+}
+
+.open::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\2b";
+	display: none;
+	font-weight: 900;
+	font-style: normal;
+	transition: all 1s;
+}
+
+@media (hover: hover) {
+	section:hover {
+		color: black;
+	}
+
+	section:hover label:hover img {
+		height: 20rem;
+		display: block;
+		margin: auto;
+		transition: .9s ease;
+	}
+
+	label:hover .close::before {
+		font-family: "Font Awesome 5 Free";
+		content: '\f00d';
+		display: none;
+		font-weight: 900;
+		font-style: normal;
+	}
+
+	section:hover input[type=radio]:checked+p>.close::before,
+	label:hover .close::before {
+		display: inline-block;
+	}
+
+	section:hover .open::before {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 820px) and (max-width: 1024px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+
+	label {
+		font-size: 1.1rem;
+	}
+
+	input[type=radio]:checked~img {
+		height: 20rem;
+	}
+}
+
+
+@media (min-width: 320px) and (max-width: 819px) {
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+
+	input[type=radio]:checked~img {
+		height: 13rem;
+	}
+}
