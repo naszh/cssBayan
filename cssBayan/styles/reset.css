@@ -10,12 +10,6 @@
 	box-sizing: border-box;
 }
 
-h1,
-p {
-	font-size: inherit;
-	font-weight: inherit;
-}
-
 ul,
 ul li {
 	list-style: none;
